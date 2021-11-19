@@ -18,8 +18,9 @@ public class FirstRepeatingElement {
     return 0;
 
   }
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     FirstRepeatingElement obj = new FirstRepeatingElement();
-    System.out.println(obj.findFirstRepeatingElement(args[0]));
+    String word = "GeeksForGeeks";
+    System.out.println(obj.findFirstRepeatingElement(word));
   }
 }
