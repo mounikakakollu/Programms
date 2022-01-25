@@ -1,0 +1,6 @@
+python3 -m venv env
+source env/bin/activate
+
+python migrations/manage.py version_control
+python migrations/manage.py upgrade
+python wsgi.py

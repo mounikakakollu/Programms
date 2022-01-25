@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block container %}
+<style type="text/css">
+  #udf_editor {
+     height: 500px;
+    }
+</style>
+<div class="sidenav navbar navbar-inverse">
+  <!-- <table id=contents_table style="cursor: pointer;" class="table table-hover">
+  <thead>
+    <th>Contents</th>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table><br> -->
+<ul class = "nav navbar-nav">
+  <li><a href="#">Python</a></li>
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">DataStructures<b class="caret"></b></a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li class="dropdown-item"><a href="#">Services</a></li>
+          <li class="dropdown-item"><a href="#">Permanent Failed Messages</a></li>
+          <li class="dropdown-item"><a href="#">Users</a></li>
+          <li class="dropdown-item"><a href="#">Configure Topics</a></li>
+      </ul>
+  </li>
+  <li><a href="{{url_for('practice')}}">Algorithms</a></li>
+  <li><a href="#">DynamicProgramming</a></li>
+
+</ul>
+</div>
+
+    <div class = "span10">
+      </div>
+    <div class="span10">
+			<input type="hidden" name="rule_id" id="rule_id">
+			<label id="code"> <h4>Code </h4></label>
+			<div id="udf_editor"></div>
+			<br>
+			<button id="compile" class='btn btn-primary'onclick=update_rule()> Compile&Test</button>
+      <button id="submit" class='btn btn-primary' onclick=update_rule()>Submit</button>
+		</div>
+</div>
+<script type="text/javascript">
+    var PythonMode = ace.require("ace/mode/python").Mode;
+    var udf_editor = ace.edit("udf_editor");
+    udf_editor.setOption("showPrintMargin", false)
+    udf_editor.session.setMode(new PythonMode());
+
+</script>
+{% endblock %}

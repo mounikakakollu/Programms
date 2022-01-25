@@ -1,0 +1,8 @@
+database:
+  engine: mysql
+  username: root
+  password: ''
+  host: localhost
+  database: pypro
+  pool_size: 10
+  max_overflow: 10

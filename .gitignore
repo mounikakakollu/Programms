@@ -1,0 +1,10 @@
+
+*.iml
+*.xml
+Programms/.DS_Store
+*.class
+*.pyc
+Programms/pyPro/app/.DS_Store
+*.txt
+*/env
+Programms/pyPro/env/*

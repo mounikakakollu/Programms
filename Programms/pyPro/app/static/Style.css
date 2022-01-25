@@ -1,0 +1,46 @@
+
+.navbar {
+	background-color: #032707;
+  font-size: 150%;
+}
+
+.nav.navbar-nav li a {
+  color: white;
+}
+
+.brand {
+  color: white;
+}
+
+
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 10%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 1000; /* Stay at the top */
+  left: 0;
+  /* background-color: #032707; /* Black */ */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 2%;
+	/* padding-left: 1%; */
+  text-align: center;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  font-size: 70%;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
