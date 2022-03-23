@@ -1,30 +1,20 @@
 package Arrays;
 
-import java.util.Scanner;
-
 public class Alterative_Zeros {
 
-	static Scanner s;
+	
 	public static void main(String[] args) {
-		s=new Scanner(System.in);
-        System.out.println("Enter the array size:");
-        int n = s.nextInt();
-        int a[]= new int[n];
-        System.out.println("Enter the array:");
-        int i;
-        for(i=0;i<n;i++) {
-        	a[i]=s.nextInt();
+		int arr[] =  new int[] {1,2,3,4,5};
+		int len=arr.length;
+		int newArr[]=new int[2*len];
+		int var=0;
+        for(int i=0;i<len;i++) {
+        	newArr[var++] = arr[i];
+        	newArr[var++] = 0;
         }
-        for(i=0;i<n;i++) {
-        	if(i%2==0) {
-        		a[i]=0;
-        	}
+        System.out.println("Zeros at alteranative postions in a array:");
+        for(int i=0;i<2*len;i++) {
+        	System.out.print(newArr[i] + " ");
         }
-        System.out.println("Zeros at even postions in a array:");
-        for(i=0;i<n;i++) {
-        	System.out.print(a[i] + " ");
-        }
-
 	}
-
 }

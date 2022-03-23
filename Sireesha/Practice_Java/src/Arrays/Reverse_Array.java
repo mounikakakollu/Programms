@@ -1,29 +1,18 @@
 package Arrays;
-import java.util.Scanner;
+import java.util.*;
 public class Reverse_Array {
     
-	static Scanner s;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        s=new Scanner(System.in);
-        System.out.println("Enter the array size:");
-        int n = s.nextInt();
-        int a[]= new int[n];
-        System.out.println("Enter the array:");
-        int i,temp;
-        for(i=0;i<n;i++) {
-        	a[i]=s.nextInt();
-        }
-        for(i=0;i<n/2;i++) {
-        	temp=a[(n-1)-i];
+        int arr[] = new int[] {1,2,3,4,5,6};
+        for(int i=0;i<arr.length/2;i++) {
+        	int temp=arr[(arr.length-1)-i];
         	//System.out.println("temp" + temp);
-        	a[(n-1)-i]=a[i];
-        	a[i]=temp;
+        	arr[(arr.length-1)-i]=arr[i];
+        	arr[i]=temp;
         }
-        System.out.println("The Reversed array is:");
-        for(i=0;i<n;i++) {
-        	System.out.print(a[i] + " ");
-        }
+        System.out.println("The Reversed array is:" + Arrays.toString(arr));
+        
 	}
 
 }
